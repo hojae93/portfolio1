@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="script/js1.js">
+    <script src="https://kit.fontawesome.com/8e2f1ec9e6.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <section class="main-container">
+        <div class="nav">
+            <nav class="nav-box">
+                <div><a href="#">About</a></div>
+                <div><a href="#">Work</a></div>
+                <div><a href="#">Contact</a></div>
+                <div class="nav-menu">
+                    <input type="checkbox" id="check_box">
+                        <label for="check_box">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </label>
+                </div>
+            </nav>
+
+            <div id="side_menu">
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+            <div class="main-text">
+                <div class="text-container" id="textContainer">
+                    <span>앞</span>
+                    <span>으</span>
+                    <span>로</span>
+                    <span>나</span>
+                    <span>아</span>
+                    <span>가</span>
+                    <span>기</span>
+                    <span>위</span>
+                    <span>한</span>
+                    <span>노</span>
+                    <span>력</span>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="about-container">
+            <div class="title">About</div>            
+            <div class="about-box">
+                <div class="about-img">
+                    <div class="flip-outer">
+                        <div class="flip-inner">
+                            <img src="images/profile (1).png" alt="사진" class="front">
+                            <div class="back">
+                                <h4>개발자 이호재</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <ul>
+                        <li><i class="fa-solid fa-user" style="color: #ffffff;"></i> : 이호재</li>
+                        <li><i class="fa-regular fa-calendar" style="color: #ffffff;"></i> : 1993.10.05</li>
+                        <li>
+                            <i class="fa-solid fa-pencil" style="color: #ffffff;"></i>
+                            : 진주보건대학교 치기공과 졸업 <br>
+                                 UX/UI 과정평가형 웹디자인기능사 국비교육 수료 
+                            </li>
+                        <li><i class="fa-solid fa-envelope" style="color: #ffffff;"></i> : id931005@naver.com</li>
+                        <li><i class="fa-solid fa-id-card" style="color: #ffffff;"></i> : 웹디자인기능사, 컴퓨터활용능력 1급</li>
+                        <li><i class="fa-solid fa-tag" style="color: #ffffff;"></i> : Html, Css, Javascript</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div id="parallax_cont">
+            <section id="textdeco" class="parallax_item">
+                <div class="parallax_item_animation1 parallax_item_text1">Html Css Javascript Html Css Javascript Html Css Javascript</div>
+                <div class="parallax_item_animation2 parallax_item_text2">Html Css Javascript Html Css Javascript Html Css Javascript</div>
+            </section>
+        </div>
+        
+        <section id="work">
+            <div class="title"><a href="#">Work</a></div>
+            <div class="work-1 parallax__item">
+              <div class="parallax__item__desc reveal">
+                <ul>
+                    <li>Spotify</li>
+                    <li>첫번째로 만든 웹페이지</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section id="work">
+            <div class="work-2 parallax__item">
+              <div class="parallax__item__desc reveal">Food</div>
+            </div>
+          </section>
+          <section id="work">
+            <div class="work-3 parallax__item">
+              <div class="parallax__item__desc reveal">Event</div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="contact-container">
+                <div class="title"><a href="#">Contact</a></div>
+                <div class="contact-item">
+                    <a href="#"><i class="fa-brands fa-instagram " style="color: #ffffff; font-size:100px;"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook " style="color: #ffffff; font-size:100px;"></i></a>
+                    <a href="#"><i class="fa-brands fa-github " style="color: #ffffff; font-size:100px;"></i></a>
+                </div>
+            </div>
+        </section>
+
+    
+
+    <script>
+        // 
+      
+    </script>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+    <script>
+
+        const btn = document.querySelector('.nav-menu');
+        btn.addEventListener('click', (e) => {
+            const checked = btn.querySelector('input:checked');
+                if ( checked ) {
+                    document.querySelector('#side_menu').classList.add('active');
+                    } else {
+                    document.querySelector('#side_menu').classList.remove('active');
+                    }
+                // const target = document.querySelector('#side_menu');
+                // if ( target.classList.contains('active') ) {
+                //     target.classList.remove('active');
+                // } else {
+                //     target.classList.add('active');
+                // }
+        });
+        // 글자올라오기
+        const textContainer = document.getElementById('textContainer');
+        const spans = textContainer.querySelectorAll('span');
+
+        gsap.fromTo(spans, {
+            y: 50,
+            opacity: 0
+            }, {
+            y: 0,
+            opacity: 1,
+            stagger: 0.2,
+            duration: 0.8, // 속도를 빠르게 하려면 이 값을 작게 조정하세요
+            ease: 'power2.out'
+        });
+        // const box1 = document.querySelector("#textdeco .parallax_item__img");
+
+        // gsap.to(box1, {
+        //     duration: 1,
+        //     x: 500,
+        //     // rotation: 360,       
+        
+        //     scrollTrigger: {
+        //         trigger: box1,
+        //         start: "top 50%",
+        //         end: "bottom 20%",
+        //         scrub: 0.5,    //true, 1, 2,....
+        //         markers: true,
+        //     }
+        // });
+
+        document.addEventListener('scroll', (e) => {
+            const box1 = document.querySelector("#textdeco .parallax_item_animation1");
+            const box2 = document.querySelector("#textdeco .parallax_item_animation2");
+            const scrollY = document.documentElement.scrollTop;
+            console.log( box1.getBoundingClientRect().y )
+            gsap.to('#textdeco .parallax_item_animation1', {x: scrollY * .5}); 
+            gsap.to('#textdeco .parallax_item_animation2', {x: -scrollY * .5}); 
+        });
+
+
+        // gsap.to(box1, {
+        //     duration: 2,
+        //     x: 500,
+        //     rotation: 360,
+        //     borderRadius: 100,
+
+        //     scrollTrigger: {
+        //         trigger: box1,
+        //         start: "top 50%",
+        //         end: "bottom 20%",
+        //         scrub: true, //true, 1, 2...
+        //         markers: true
+        //     }
+        // });
+        gsap.utils.toArray(".parallax__item").forEach((panel, i) => {
+      ScrollTrigger.create({
+        trigger: panel,
+        start: "top top",
+        pin: true,
+        pinSpacing: false
+
+      });
+    });
+
+    gsap.utils.toArray(".parallax__item__desc").forEach((item) => {
+      ScrollTrigger.create({
+        trigger: item,
+        start: "top 80%",
+        end: "bottom 20%",
+        markers: false,
+        onEnter: () => {animate(item)},
+      });
+
+      item.style.opacity = "0";
+    });
+
+    const animate = (item) => {
+      gsap.fromTo(item,
+        {autoAlpha: 0, x: 100, y: 0},
+        {autoAlpha: 1, x: 0, y: 0, duration: 4, overwrite: "auto", ease: "expo"}
+      );
+    }
+    
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+*{box-sizing: border-box; margin:0; padding:0; font-family: 'Bagel Fat One', system-ui; font-family: 'Noto Sans KR', sans-serif; }
+a{text-decoration: none; color:inherit;}
+ul{list-style: none;}
+body{color:#fff; overflow-x: hidden; background: #272727; }
+
+
+.nav-box{display:flex; padding:10px; justify-content: flex-end;}
+.nav-box>div{margin:10px 80px 10px 40px; font-size:20px;}
+.nav-box>div:hover{animation-name: 움찔움찔; animation-duration: 1s; color:rgb(131, 112, 112);}
+.nav-menu{padding-top:5px;}
+#check_box {display: none;}
+#check_box + label {position: relative; display: block; width: 25px; height: 20px; cursor: pointer; z-index: 2;}
+#check_box + label > span {position: absolute; display: block; width: 100%; height: 3px;  background: white; transition: all 300ms;}
+#check_box:checked + label > span:nth-child(1) {top: 50%; transform: translate(0, -50%); transform: rotate(45deg);}
+#check_box + label > span:nth-child(2) {top: 50%; transform: translate(0, -50%);}
+#check_box:checked + label > span:nth-child(2) {opacity: 0;}  
+#check_box + label > span:nth-child(3) {bottom: 0;}
+#check_box:checked + label > span:nth-child(3) {top: 50%; transform: translate(0, -50%); transform: rotate(-45deg);}
+#side_menu {position: fixed;  width: 100%; height: 100%; background-color: tomato; left:0; transform:translateX(-100%); transition: all 300ms; z-index: 1; top: 0px; padding: 60px 20px 20px 20px;}
+#check_box:checked + label + #side_menu {transform:translateX(0%);}
+#side_menu{text-align: center;}
+#side_menu li{font-size:80px; padding:50px; margin-top:50px; font-weight: 900;}
+
+
+#side_menu.active {transform: translateX(0);}
+
+@keyframes 움찔움찔{
+    0% {transform: rotate(5deg);}
+    33% {transform: rotate(-5deg);}
+    66% {transform: rotate(5deg);}
+    100% {transform: rotate(0deg);}
+
+}
+
+.main-container{width:100vw; height:100vh;  }
+.main-text{display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; } 
+.text-container {overflow: hidden; white-space: nowrap; font-size: 5em; display: flex; justify-content: center; }
+.text-container span {display: inline-block; opacity: 0;}
+
+.title{font-size: 80px; font-weight: 900; text-align: center; margin-bottom:20px;}
+
+.about-box{display:flex; max-width:1460px;}
+.about-img{width:50%; margin-left:300px;}
+.flip-outer{width:300px; height:300px;}
+.flip-inner{width:100%; height:100%; position: relative; transition: all 1s; transform-style: preserve-3d;}
+.flip-inner:hover{transform: rotateY(180deg);}
+.flip-inner img{margin-top:80px;}
+.front{width:100%; position: absolute; z-index: 1; backface-visibility: hidden;}
+.back{width:100%; position: absolute; text-align: center; transform: rotateY(180deg); margin-top:200px;}
+.about-text{width:50%; font-size:18px;}
+.about-text li{border-bottom: 1px solid #fff; padding:10px; margin-top:15px; margin-bottom:20px;}
+
+#parallax_cont{overflow: hidden;}
+.parallax_item{width:300vw; height: 500px;}
+.parallax_item_text1{ font-size:150px; display:flex; width:100%; margin-left:-100vw;}
+.parallax_item_text2{ font-size:150px; display:flex; width:100%;}
+
+.total-margin{margin-left:300px;}
+
+#work {width: 100%; height:800px; background-color:#272727 ; display: flex; flex-wrap: wrap; justify-content: center; align-items: center center; position: relative; }
+
+.split>span {display: inline-block;}
+.work-1 {background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../images/pool.jpg); width: 100%; height: 100%;}
+.parallax__item__desc{position: absolute; top: 30%; left: 30%; color: #fff; font-size: 80px; font-weight: 900; text-align: center;}
+.work-1:hover {opacity: 0.8;}
+.work-2 {background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/food1.jpg); width: 100%; height: 100%; background-position: center; background-repeat: no-repeat;}
+.work-2:hover {opacity: 0.8;}
+.work-3 {background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/event2.jpg); width: 100%; height: 100%; background-position: center; background-repeat: no-repeat;}
+.work-3:hover {opacity: 0.8;}
+
+.contact{height:600px;}
+.contact-item{text-align: center; margin: 50px;}
+.contact-item>a{margin-left:50px; margin-right:50px;}
